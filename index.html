@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIKAS S S</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+.education-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    background: #444444; 
+    border: 2px solid #FFD700; 
+    padding: 12px;
+    margin-top: 20px;
+    border-radius: 8px;
+    font-size: 1.1em; 
+}
+
+.college-logo {
+    width: 80px; 
+    height: auto; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.education-box div {
+    flex: 1; 
+    padding: 0 20px; 
+}
+
+.education-box:nth-child(even) {
+    flex-direction: row-reverse; 
+}
+
+
+        html {
+    scroll-behavior: smooth;
+}
+
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #000000; 
+            color: white;
+        }
+
+        header {
+            background-color: #333333; 
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em; 
+            animation: fadeIn 3s;
+        }
+
+        nav {
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        nav a {
+            margin: 0 15px;
+            color: #c6cf1d; 
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2em; 
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 100%;
+            margin: auto;
+            padding: 20px;
+            background: #2a2a2a; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+        }
+
+        .profile-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .profile-photo {
+            width: 250px; 
+            height: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #FFD700; 
+            animation: bounce 2s infinite;
+        }
+
+        .profile-text {
+            padding: 0 20px;
+        }
+
+        .animated-text {
+            font-size: 2em; 
+            animation: slideIn 2s;
+        }
+
+        .running-text {
+            font-size: 2em; 
+            display: inline-block;
+            color: #FFD700;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .running-text span {
+            position: absolute;
+            animation: fadeSlide 2s infinite;
+            white-space: nowrap;
+        }
+
+        .about-paragraph {
+            font-size: 1.2em; 
+            margin-top: 10px;
+        }
+
+        .resume-button {
+            display: inline-block;
+            margin: 20px 0;
+            padding: 12px 18px;
+            background-color: #FFD700; 
+            color: black;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 1.2em; 
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .resume-button:hover {
+            background-color: #FFA500; 
+            transform: translateY(-2px);
+        }
+
+        h2 {
+            color: #FFD700; 
+            font-size: 1.8em; 
+        }
+
+        .interactive-box, .tools-box {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .interactive-box div, .tools-box div {
+            background: white;
+            color: #000000;
+            border: 2px solid #FFD700; 
+            padding: 12px;
+            text-align: center;
+            border-radius: 8px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            font-size: 1.1em; 
+        }
+
+        .interactive-box div:hover, .tools-box div:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            border-color: #FFA500;
+        }
+
+       
+
+        footer {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 1.2em; 
+            color: white;
+        }
+
+        footer a {
+            color: #FFD700; 
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .email-icon, .linkedin-icon {
+            font-size: 30px; 
+            color: #FFD700;
+            margin: 0 15px;
+            transition: color 0.3s;
+        }
+
+        .email-icon:hover, .linkedin-icon:hover {
+            color: #FFA500; 
+        }
+
+        .animated-developer-text {
+            display: inline-block;
+            margin-left: 10px;
+            color: #db7815;
+            animation: fadeInOut 4s infinite alternate, slideInOut 4s infinite alternate;
+            font-weight: bold;
+        }
+
+        @keyframes fadeInOut {
+            0%, 100% { opacity: 0; }
+            50% { opacity: 1; }
+        }
+
+        @keyframes slideInOut {
+            0% { transform: translateX(-20px); }
+            50% { transform: translateX(0); }
+            100% { transform: translateX(20px); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateX(-100%); }
+            to { transform: translateX(0); }
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @keyframes fadeSlide {
+            0% {
+                opacity: 0;
+                transform: translateX(-50%);
+            }
+            50% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+            100% {
+                opacity: 0;
+                transform: translateX(50%);
+            }
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em; 
+            }
+
+            .profile-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .profile-photo {
+                width: 200px;
+                height: 200px;
+            }
+
+            .resume-button {
+                font-size: 1em;
+                padding: 10px 15px;
+            }
+
+            .interactive-box div, .tools-box div {
+                font-size: 1em; 
+                padding: 10px;
+            }
+
+            footer {
+                font-size: 1em;
+            }
+
+            footer a {
+                font-size: 1.2em;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                background-color: #272825; 
+            }
+
+            header {
+                background-color: #222222; 
+            }
+
+            .container {
+                background: #93c8a6; 
+            }
+
+            .profile-text h1 {
+                color: #FFD700; 
+            }
+
+            .resume-button {
+                background-color: #FFA500; 
+                color: black;
+            }
+
+            .resume-button:hover {
+                background-color: #FFD700; 
+            }
+
+            footer {
+                color: #FFD700; 
+            }
+
+            footer a {
+                color: #FFA500; 
+            }
+
+            footer a:hover {
+                color: #FFD700; 
+            }
+        }
+       
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>VIKAS S S</h1>
+    </header>
+
+    <nav>
+        <a href="#skills">Skills</a>
+        <a href="#tools">Tools</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="https://github.com/vikas2023ece" target="_blank">GitHub</a>
+    </nav>
+
+    <div class="container">
+        <div class="profile-container">
+            <div class="profile-text">
+                <h1 class="animated-text">
+                    Hi, I am Vikas 
+                    <br>
+                    <span class="animated-developer-text">I am a Full Stack Developer</span>
+                </h1>
+                <p class="about-paragraph">I am a motivated and versatile individual, always excited to embrace new challenges. My passion for learning drives me to consistently deliver high-quality results. With a positive attitude and a commitment to growth, I am eager to contribute meaningfully and achieve success in every endeavor</p>
+            </div>
+            
+            <img src="1.webp" alt="Vikas" class="profile-photo">
+        </div>
+
+        <a class="resume-button" href="https://drive.google.com/drive/folders/1LpuTCFxE9I5w0PNlwnrciKQVH3N3jSLQ?usp=drive_link" target="_blank">Check Resume</a>
+
+       
+
+        <h2 id="skills">Skills</h2>
+        <div class="interactive-box skills">
+            <div>HTML</div>
+            <div>CSS</div>
+            <div>Java</div>
+            <div>C++</div>
+            <div>Python</div>
+            <div>C</div>
+        </div>
+
+        <h2 id="tools">Tools</h2>
+        <div class="tools-box">
+            <div>VS Code</div>
+            <div>Eclipse</div>
+            <div>MongoDB</div>
+            <div>MySQL</div>
+        </div>
+
+        <h2 id="certifications">Certifications</h2>
+        <div class="interactive-box certifications">
+            <div><a href="https://www.udemy.com/certificate/UC-5162c420-546b-441c-97d9-780ec1bc89da/" target="_blank">JavaScript For Beginners Complete Course - Udemy (2024)</a></div>
+            <div><a href="https://www.udemy.com/certificate/UC-98df7fca-9529-4cb7-87fa-44a139247a49/" target="_blank">Data Structures & Algorithms using C and C++ - Udemy (2024)</a></div>
+            <div><a href="https://www.udemy.com/certificate/UC-dbb33fc1-478f-416d-8178-5179dcae6db6/" target="_blank">Java and PHP Complete Course for Beginners - Udemy (2024)</a></div>
+            <div><a href="https://www.udemy.com/certificate/UC-5162c420-546b-441c-97d9-780ec1bc89da/" target="_blank">Java Programming – Beginner to Master - Udemy (2024)</a></div>
+        </div>
+
+        <h2 id="projects">Projects</h2>
+        <div class="interactive-box projects">
+            <div><a href="https://github.com/vikas2023ece" target="_blank">Retail POS Management System (JDBC connectivity)</a></div>
+            <div><a href="https://github.com/vikas2023ece" target="_blank">Library Management System</a></div>
+            <div><a href="https://github.com/vikas2023ece" target="_blank">Face Emotion Detector</a></div>
+        </div>
+    </div>
+    <h2 id="education">Education</h2>
+    <div class="education-box">
+        <img src="sri.jpg" alt="Sri Eshwar College Logo" class="college-logo">
+        <div>
+            <p><strong>B.E., ECE - Sri Eshwar College of Engineering</strong><br>
+               CGPA: 7.5 (2023 - 2027)</p>
+        </div>
+    </div>
+    <div class="education-box">
+        <div>
+            <p><strong>Changavi Vidhyaa Mandhir Matriculation Hr. Sec. School</strong><br>
+               HSC – 74.5% (2022 - 2023)</p>
+        </div>
+        <img src="changavi.jpeg" alt="Changavi Vidhyaa Mandhir Logo" class="college-logo">
+    </div>
+    
+    
+    <footer>
+        <a href="mailto:vikas.ss2023ece@sece.ac.in"><i class="fas fa-envelope email-icon"></i></a>
+        <a href="https://www.linkedin.com/in/vikas-sss/" target="_blank"><i class="fab fa-linkedin linkedin-icon"></i></a>
+    </footer>
+</body>
+</html>
